@@ -1,5 +1,5 @@
 # Networking-TDA
-Things I learn from the book: Computer Networking A Top-Down Approach
+Things I learn from the book *Computer Networking A Top-Down Approach*
 
 ## Chapter 1: Computer Networks and the Internet
 * **What is the Internet?**
