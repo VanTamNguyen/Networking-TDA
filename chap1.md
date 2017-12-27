@@ -17,3 +17,6 @@
     program, email client program...
     
 * **Network Core**
+    The network core contains **routers and link-layer switches**.
+    * **Packet switching** -- To send messages from source host to destination host, the source breaks the long message into smaller chunks of data called *packet*. Each packet travels through the communication links and packet switches.
+    * **Circuit switching** -- In circuit-switched network, the resources needed along a path to provide for communication between hosts are *reserved* for the duration of communication. In packet-switched network, the resources are *not reserved*.
