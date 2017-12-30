@@ -33,5 +33,11 @@ Importantly, we don't need to write programs running on network core devices suc
     * UDP is connectionless, no handshaking before processes start to communicate. UDP provides unreliable data transfer.
 
 ### 2.2 DNS: The Internet's Directory Service
+The host can be identified by *hostname* and *IP address*.
+#### 2.2.1 Services Provided by DNS
+We need a service that translates hostname to IP address. That's the main task of **DNS (Domain Name System)**. The DNS is (1) a distributed database implemented in a hierarchy of **DNS servers** and (2) a application layer protocol that allows hosts to query distributed database. The DNS servers are often the UNIX machines running Berkeley Internet Name Domain (BIND). The DNS protocol runs over UDP and uses port 53.
 
+#### 2.2.2 How DNS works
+
+#### 2.2.3 DNS Records and Messages
 ### 2.3 Socket Programming
