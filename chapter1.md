@@ -1,7 +1,7 @@
 # Chapter 1: Internet Introduction
 
 * **What is the Internet?**
-![The Internet](internet.png)
+
 * **Protocol**
     * Defines the format and order of messages exchange between
     two or more communicating entities, as well as actions
