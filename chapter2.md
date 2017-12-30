@@ -35,7 +35,9 @@ Importantly, we don't need to write programs running on network core devices suc
 ### 2.2 DNS: The Internet's Directory Service
 The host can be identified by *hostname* and *IP address*.
 #### 2.2.1 Services Provided by DNS
-We need a service that translates hostname to IP address. That's the main task of **DNS (Domain Name System)**. The DNS is (1) a distributed database implemented in a hierarchy of **DNS servers** and (2) a application layer protocol that allows hosts to query distributed database. The DNS servers are often the UNIX machines running Berkeley Internet Name Domain (BIND). The DNS protocol runs over UDP and uses port 53.
+We need a service that translates hostname to IP address. That's the main task of **DNS (Domain Name System)**. The DNS is (1) a distributed database implemented in a hierarchy of **DNS servers** and (2) a application layer protocol that allows hosts to query distributed database. The DNS servers are often the UNIX machines running Berkeley Internet Name Domain (BIND). The DNS protocol runs over UDP and uses port 53. DNS provides some other important services:
+* **Host aliasing.** A host with a complicated hostname (which called *canonical hostname*) can have one or more alias names. Alias hostnames are typically more mnemonic than canonical hostnames. DNS can be invoked by an application to get the canonical of an alias hostname.
+* **Load distribution**. DNS is also used to perform load distribution among replicated servers such as Web servers. Busy sites are replicated over multiple servers. Each server has its own IP address. For replicated servers, a *set* of IP addresses are associated with a canonical hostname. The DNS database contains this set of addresses. When clients make an DNS query for a name mapped to a set of addresses, the name server responds with entire set of addresses, but rotates the order of the set of addresses within each reply. DNS rotation helps to distribute the traffic among replicated servers.
 
 #### 2.2.2 How DNS works
 
