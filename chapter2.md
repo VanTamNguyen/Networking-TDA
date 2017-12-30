@@ -40,6 +40,13 @@ We need a service that translates hostname to IP address. That's the main task o
 * **Load distribution**. DNS is also used to perform load distribution among replicated servers such as Web servers. Busy sites are replicated over multiple servers. Each server has its own IP address. For replicated servers, a *set* of IP addresses are associated with a canonical hostname. The DNS database contains this set of addresses. When clients make an DNS query for a name mapped to a set of addresses, the name server responds with entire set of addresses, but rotates the order of the set of addresses within each reply. DNS rotation helps to distribute the traffic among replicated servers.
 
 #### 2.2.2 How DNS works
+Suppose an applicaton running on user's host need to translaste a hostname to address. The application will invoke the client side of DNS, specifying the hostname need to be translated. The DNS in the user's will take over, sending name query into network. All DNS query and reply messages are sent with UDP datagrams to port 53. After a delay, the DNS in the user's host receives the disired mapping. This mapping is then passed to invoking application.
+* **A Distributed, Hierachical Database**
 
 #### 2.2.3 DNS Records and Messages
+
+
+
+
+
 ### 2.3 Socket Programming
