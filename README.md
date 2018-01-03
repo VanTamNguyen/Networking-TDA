@@ -5,3 +5,5 @@ Networking with top down approach
 
 ### [Chapter 2: Application Layer](chapter2.md)
 
+### Some Cool Resources
+* https://inst.eecs.berkeley.edu/~cs168/fa14/
