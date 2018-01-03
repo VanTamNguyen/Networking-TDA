@@ -5,8 +5,6 @@
   <img src="images/networks.png"/>
 </p>
 
-![layers](images/layers.png)
-
 * **Protocol**
     * Defines the format and order of messages exchange between
     two or more communicating entities, as well as actions
@@ -30,3 +28,10 @@
 * **Throughput** is the rate in bits/second at which destination is receiving packets.
 
 * **Protocol Layer, Layered Architecture**
+![layers](images/layers.png)
+
+    * Application Layer
+    * Transport Layer
+    * Network Layer
+    * Link Layer
+    * Physical Layer
