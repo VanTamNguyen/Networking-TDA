@@ -1,6 +1,7 @@
 # Chapter 1: Internet Introduction
 
 * **What is the Internet?**
+![networks](images/networks.png)
 ![layers](images/layers.png)
 
 * **Protocol**
