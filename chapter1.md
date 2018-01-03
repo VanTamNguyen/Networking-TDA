@@ -29,7 +29,11 @@
 * **Protocol Layer, Layered Architecture**<br/>
 ![layers](images/layers.png)<br/>
     * **Application Layer** is where network applications and their application-layer protocols reside. The Internet's application-layer includes many protocols such as HTTP for Web, SMTP for email, FTP for file transfer, etc. An application-layer protocal is distributed over multiple end systems with one application in one host using the protocol to exchange the messages with the application in another host.
+
     * **Transport Layer** transports the application-layer messages between application(process) endpoints. The Internet has two transport protocols: TCP and UDP. TCP provides connection-oriented service and reliable data transfer. The UPD does not provide both of these services. The TCP protocol also provides a congestion-control mechanism while UDP does not.
+
     * **Network Layer** provides the service of moving network-layer packets known as datagrams from one host to another over the network. It sounds similar to Transport Layer but it does not. Transport Layer tranfer data from process to proces  while Network Layer transfer data from host to host over the network. The Internet includes **IP protocol**. All Internet components that have a network layer must run IP protocol. The Internet's network layer also contains the routing protocols that determine the route that the datagrams travel between source and destination. The Internet has many routing protocols. The Internet is a network of networks, within a network the network administrator can run any desired routing protocols. The bottom line is the network layer contains both IP protocol and routing protocols. 
-    * **Link Layer**
-    * **Physical Layer**
+
+    * **Link Layer** is responsible for moving entire frames from one network node to an adjacent node.
+
+    * **Physical Layer** is responsible for moving *individual bits* within a frame from one network node to the next.
