@@ -1,7 +1,7 @@
 # Chapter 1: Internet Introduction
 
 * **What is the Internet?**
-![layers](layers.png)
+![layers](images/layers.png)
 
 * **Protocol**
     * Defines the format and order of messages exchange between
