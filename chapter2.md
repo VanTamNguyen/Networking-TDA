@@ -48,6 +48,9 @@ The DNS uses large number of name server, organized in a hierachical fashion and
 
     To understand how these 3 classes of name servers works, suppose a DNS client wants to know the IP address of the host name xxx.com. The client first contact with the root name server, the root name server will respond the IP of top-level domain name server for .com. The client contact with .com top-level domain server to get the address of authoritative name server that contains the DNS record for xxx.com. Finally the client will contact the authoritative name server to get IP address of hostname xxx.com.
 
+* **DNS Caching**<br/>
+DNS Caching is critically important to improve DNS delay performance and reduce the number of DNS messages travel on the Internet. The idea behind the DNS Caching is very simple. Each time a DNS server receives a DNS reply, it can cache the mapping in its local memory. If a mapping is cached in a name server, and another query for the same hostname arrives, the server can reply the IP address even it's not the authoritative name server.
+
 #### 2.2.3 DNS Records and Messages
 
 
