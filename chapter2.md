@@ -52,7 +52,11 @@ The DNS uses large number of name server, organized in a hierachical fashion and
 DNS Caching is critically important to improve DNS delay performance and reduce the number of DNS messages travel on the Internet. The idea behind the DNS Caching is very simple. Each time a DNS server receives a DNS reply, it can cache the mapping in its local memory. If a mapping is cached in a name server, and another query for the same hostname arrives, the server can reply the IP address even it's not the authoritative name server.
 
 #### 2.2.3 DNS Records and Messages
-
+DNS servers store **resource records (RRs)** which have the format **(Name, Value, Type, TTL)**. TTL is time to live of the record; it determines when the record should be removed from cache. We will ignore it here. The meaning of Name and Value depend on the Type:
+* **Type A**, Name is the hostname and Value is the IP address. (relay1.bar.foo.com, 145.37.93.126, A) is an example.
+* **Type NS**, Name is the domain and Value is the hostname of authoritative DNS server that knows the IP address of the domain. (foo.com, dns.foo.com, NS) is an example.
+* **Type CNAME** Name is the alias name and Value is the canonical name. (foo.com, relay1.bar.foo.com, CNAME) is an example.
+* **Type MX** Name is the alias of mail server and Value is the canonical name of that mail server. (foo.com, mail.bar.foo.com, MX) is an example.
 
 
 
