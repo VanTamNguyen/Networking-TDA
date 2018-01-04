@@ -5,9 +5,8 @@ At the core of network application development is writing programs that run on d
 
 Importantly, we don't need to write programs running on network core devices such as routers and link-layer switches.
 
-* **Network Application Architecture**
-
-    Keep in mind that application architecture is distinctly different from the network architecture (layered architecture). There are 2 main architectures in network application: client-server and peer-to-peer.
+* **Network Application Architecture**<br/>
+    Keep in mind that application architecture is distinctly different from the network architecture (layered architecture). There are 2 main architectures in network application: client-server and peer-to-peer.
 
     * The client-server architecture has one host called *server* that is always-on and services requests from many *clients*. Note that, in the client-server architecture, the clients don't communicate directly to each other, they do via the server. Another characteristic of client-server architecture is that the server is fixed, well-known address, called an IP address.
     * The peer-to-peer architecture has minimal (or no) reliance on dedicated server. Instead the application expoits the direct communication between pair of connected hosts, called *peers*. 
@@ -18,16 +17,14 @@ Importantly, we don't need to write programs running on network core devices suc
     * A process sends messages into, and receives messages from, the network through a software interface called **socket**. A socket is the interface between the application layer and the transport layer within a host. Since the socket is the programming interface with which applications are built, the application developer has control of everything on application layer side of the socket and has little control of transport layer side of the socket. The only control the application developer has on transport layer side is (1) the transport protocol and (2) few transport parameter such as muximum buffer.
     * In the Internet, the host is idenitfied by its **IP address**. In addition to knowing the address of the destination host, the sending process must also identify the process running on the destination host. This information is needed because a host can run many network application processes. A destination **port number** serves this purpose. For example, Web server is identified by port 80.
 
-* **Transport Services Available to Applications**
-
+* **Transport Services Available to Applications**<br/>
     Recall that the socket is the programming interface between the application process and the transport layer protocol. The process at the sending side pushes to messages through a socket. At the other side of the socket, the transport layer protocol has responsibility of getting the messages to the socket of receiving process. What are the services that the transport layer protocol provides the application layer?
     * Reliable Data Transfer
     * Throughput
     * Timing
     * Security
 
-* **Transport Services Provided by the Internet**
-
+* **Transport Services Provided by the Internet**<br/>
     The Internet (or more generally, the TCP/IP networks) provides two transport protocols to the application layer, TCP and UDP. When the application developer creating an network application, one of the first decision he/she has to decide is which transport protocol he/she need to use.
     * TCP provides *connection-oriented service* and *reliable data transfer service*. Before the application-level messages are exchanged, the client and server have to exchage the transport layer information. This socalled hanshaking procedure. After the handshaking, a TCP connection is said to exist between the sockets of the two processes. The connection is a full-duplex connection meaning they can send and receives messages at the same time. When the applications finishes sending the messages, it must tear down the connection. The application layer can rely on TCP to deliver all data without error and in proper order.
     * UDP is connectionless, no handshaking before processes start to communicate. UDP provides unreliable data transfer.
@@ -44,9 +41,11 @@ Suppose an applicaton running on user's host need to translaste a hostname to ad
 * **A Distributed, Hierachical Database**<br/>
 The DNS uses large number of name server, organized in a hierachical fashion and distributed around the world. No single name server has all the mappings for all the hosts on the Internet. There are three classes of DNS servers: (1) *root name server*, (2) *top-level domain name server* and (3) *authoritative name server*.
 
-    * **Root name servers** 
+    * **Root name servers** manages Top-level domain name servers.
     * **Top-level domain name servers** are responsible for top-level domains such as com, org, net, edu, gov and all the country top-level domains such as vn, jp, fr, etc. 
-    * **Authoritative name servers**
+    * **Authoritative name servers**. Every organization, that has publicly accessible hosts such as Web servers and mail servers, must provides publicly accessible DNS records that map the names of these hosts to IP addresses. An organization's authoritative name servers house these DNS records.
+
+To understand how these 3 classes of name servers works, suppose a DNS client wants to know the IP address of the host name xxx.com. The client first contact with the root name server, the root name server will respond the IP of top-level domain name server for .com. The client contact with .com top-level domain server to get the address of authoritative name server that contains the DNS record for xxx.com. Finally the client will contact the authoritative name server to get IP address of hostname xxx.com.
 
 #### 2.2.3 DNS Records and Messages
 
