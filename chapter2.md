@@ -39,6 +39,7 @@ We need a service that translates hostname to IP address. That's the main task o
 #### 2.2.2 How DNS works
 Suppose an applicaton running on user's host need to translaste a hostname to address. The application will invoke the client side of DNS, specifying the hostname need to be translated. The DNS in the user's will take over, sending name query into network. All DNS query and reply messages are sent with UDP datagrams to port 53. After a delay, the DNS in the user's host receives the disired mapping. This mapping is then passed to invoking application.
 * **A Distributed, Hierachical Database**<br/>
+![dns](images/dns.png)<br/>
 The DNS uses large number of name server, organized in a hierachical fashion and distributed around the world. No single name server has all the mappings for all the hosts on the Internet. There are three classes of DNS servers: (1) *root name server*, (2) *top-level domain name server* and (3) *authoritative name server*.
 
     * **Root name servers** manages Top-level domain name servers.
