@@ -45,7 +45,7 @@ The DNS uses large number of name server, organized in a hierachical fashion and
     * **Top-level domain name servers** are responsible for top-level domains such as com, org, net, edu, gov and all the country top-level domains such as vn, jp, fr, etc. 
     * **Authoritative name servers**. Every organization, that has publicly accessible hosts such as Web servers and mail servers, must provides publicly accessible DNS records that map the names of these hosts to IP addresses. An organization's authoritative name servers house these DNS records.
 
-To understand how these 3 classes of name servers works, suppose a DNS client wants to know the IP address of the host name xxx.com. The client first contact with the root name server, the root name server will respond the IP of top-level domain name server for .com. The client contact with .com top-level domain server to get the address of authoritative name server that contains the DNS record for xxx.com. Finally the client will contact the authoritative name server to get IP address of hostname xxx.com.
+    To understand how these 3 classes of name servers works, suppose a DNS client wants to know the IP address of the host name xxx.com. The client first contact with the root name server, the root name server will respond the IP of top-level domain name server for .com. The client contact with .com top-level domain server to get the address of authoritative name server that contains the DNS record for xxx.com. Finally the client will contact the authoritative name server to get IP address of hostname xxx.com.
 
 #### 2.2.3 DNS Records and Messages
 
