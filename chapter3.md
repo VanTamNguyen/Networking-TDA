@@ -14,7 +14,8 @@
 * **Selective Repeat**
 
 ### 3.3 UDP
-
+* **UDP Segment**
+* **UDP Checksum**
 
 ### 3.4 TCP
 #### 3.4.1 Three Way Handshake
