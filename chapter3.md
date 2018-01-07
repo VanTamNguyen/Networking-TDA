@@ -17,6 +17,12 @@
 
 
 ### 3.4 TCP
-
+#### 3.4.1 Three Way Handshake
+#### 3.4.2 TCP Segment Structure
+#### 3.4.3 Sequence Number and Acknowledgement Number 
+#### 3.4.4 Reliable Data Transfer of TCP
+#### 3.4.5 TCP Connection Management
+#### 3.4.5 Flow Control
+#### 3.4.6 Congestion Control
 
  
