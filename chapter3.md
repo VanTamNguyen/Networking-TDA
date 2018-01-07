@@ -3,6 +3,7 @@
 ### 3.1 Services Provided by Transport Layer
 * **Multiplex and Demultiplex**
 * **Reliable Data Transfer**
+* **Error Detection**
 * **Congestion Control**
 
 
