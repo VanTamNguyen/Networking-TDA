@@ -7,6 +7,12 @@ import java.text.SimpleDateFormat;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * This is a simple web server that service every HTTP requests as the same. Meaning it responds every HTTP requests
+ * with a welcome message and the content of request itself.
+ * Surprisingly, you can test this web server by a browser such as Chrome. Try it by pasting this URL[localhost:54000]
+ * to the browser.
+ */
 public class SimpleWebServer {
 
     public static final int PORT = 54000;
