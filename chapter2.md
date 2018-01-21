@@ -1,12 +1,12 @@
 # Chapter 2: Application Layer
 
 ### 2.1 Principles of Network Applications
-At the core of network application development is writing programs that run on different end systems and communicate with each other over the network.For example, Web application contains browser running on user's hosts and Web server running on the server. Browser and Web server communicate with each other over the Internet.<br/>
+At the core of network application development is writing programs that run on different end systems and communicate with each other over the network. For example, Web application contains browser running on user's hosts and Web server running on the server. Browser and Web server communicate with each other over the Internet.<br/>
 
 Importantly, we don't need to write programs running on network core devices such as routers and link-layer switches.
 
 * **Network Application Architecture**<br/>
-    Keep in mind that application architecture is distinctly different from the network architecture (layered architecture). There are 2 main architectures in network application: client-server and peer-to-peer.
+    Keep in mind that application architecture is distinctly different from the network architecture (layered architecture). There are 2 main architectures in network application: client-server and peer-to-peer.
 
     * The client-server architecture has one host called *server* that is always-on and services requests from many *clients*. Note that, in the client-server architecture, the clients don't communicate directly to each other, they do via the server. Another characteristic of client-server architecture is that the server is fixed, well-known address, called an IP address.
     * The peer-to-peer architecture has minimal (or no) reliance on dedicated server. Instead the application expoits the direct communication between pair of connected hosts, called *peers*. 
@@ -62,4 +62,5 @@ DNS servers store **resource records (RRs)** which have the format **(Name, Valu
 
 
 ### 2.3 Socket Programming
-* **[TCP](code/socket/src/main/java/com/tamco/web/SimpleWebServer.java)**
+* **[TCP](code/socket/src/main/java/com/tamco/web)**
+* **[UDP](code/datagram-socket/src/com/tamco/udp)**
