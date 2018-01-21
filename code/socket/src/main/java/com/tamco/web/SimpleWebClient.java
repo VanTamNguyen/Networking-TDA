@@ -43,14 +43,14 @@ public class SimpleWebClient {
             response = new SimpleWebClient().get("localhost", 54000, "/");
             System.out.println(response);
         } catch (IOException e) {
-            System.out.println("Error occured while getting http://localhost:54000 [" + e.getMessage() + "]");
+            System.out.println("Error occurred while getting http://localhost:54000 [" + e.getMessage() + "]");
         }
 
         try {
             response = new SimpleWebClient().get("google.com", 80, "/");
             System.out.println("\n\n\n\n" + response);
         } catch (IOException e) {
-            System.out.println("\n\n\n\nError occured while getting http://google.com [" + e.getMessage() + "]");
+            System.out.println("\n\n\n\nError occurred while getting http://google.com [" + e.getMessage() + "]");
         }
     }
 }
