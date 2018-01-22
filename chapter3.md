@@ -11,6 +11,7 @@
     * Every weekend, the postmans will come with arrived mails to put to mailbox and also get the waiting mails from mailbox to send to destination house.
     * In this example, houses are the hosts (end systems); children are the processes running on hosts; postmans are the network layer, they provide a logical communication between houses; Ann and Bill are transport layer, they provides a logical communication between children (processes).
     * We can see that in this example, Ann and Bill only all their work within the house they living, they are not involved in moving mails from one mail center to another. This is similar to transport layer, only implemented in end systems.
+    * Ann and Bill use the service provided by the postmans to do their job.
 
 ### 3.2 Services Provided by Transport Layer
 * **Multiplex and Demultiplex**
