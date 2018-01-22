@@ -5,7 +5,9 @@
 * Transport layer provides **logical communication** between *processes* running on different hosts
 * Example
     * There 2 houses, one in East Coast and one in West Coast. In each house, there are 12 children living in. They are cousins. They love to write to each other in other house every week.
-    * Ann lives in the house in East Coast and Bill lives in the house in West Coast. They are responsible for mail collection and distribution.
+    * Ann lives in the house in East Coast and Bill lives in the house in West Coast. They are responsible for mail collection and distribution. Every weekend, Ann and Bill will collect mails from cousins in the house to put to mailbox and get the arrived mails from mailbox to distribute to their cousins.
+    * Every weekend, the postmans will come with arrived mails to put to mailbox and also get the waiting mails from mailbox to send to destination house.
+    * In this example, houses are the hosts (end systems); children are the processes running on hosts; postmans are the network layer, they provide a logical communication between houses; Ann and Bill are transport layer, they provides a logical communication between children (processes).
 
 ### 3.2 Services Provided by Transport Layer
 * **Multiplex and Demultiplex**
