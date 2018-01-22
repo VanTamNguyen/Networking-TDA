@@ -33,7 +33,7 @@ public class PingClient {
             return;
         }
 
-        DatagramPacket receivedPacket = new DatagramPacket(new byte[100], 100);
+        DatagramPacket receivedPacket = new DatagramPacket(new byte[4], 4);
         try {
             socket.receive(receivedPacket);
             end = System.currentTimeMillis();
