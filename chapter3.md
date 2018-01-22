@@ -1,6 +1,8 @@
 # Chapter 3: Transport Layer
 
-### 3.1 Relationship Between Transport Layer and Network Layer
+### 3.1 Transport Layer and Network Layer
+* Network layer provides **logical communication** between *hosts (end systems)*
+* Transport layer provides **logical communication** between *processes* running on different hosts
 
 ### 3.2 Services Provided by Transport Layer
 * **Multiplex and Demultiplex**
