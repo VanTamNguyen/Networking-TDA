@@ -3,7 +3,7 @@
 ### 3.1 Transport Layer and Network Layer
 * Network layer provides **logical communication** between *hosts (end systems)*
 * Transport layer provides **logical communication** between *processes* running on different hosts
-* Transport layer is implemented only in end systems
+* Transport layer is implemented only in end systems (view this [image](images/layers.png) for more visualization)
 * Example
     * There 2 houses, one in East Coast and one in West Coast. In each house, there are 12 children living in. They are cousins. They love to write to each other in other house every week.
     * Ann lives in the house in East Coast and Bill lives in the house in West Coast. They are responsible for mail collection and distribution. Every weekend, Ann and Bill will collect mails from cousins in the house to put to mailbox and get the arrived mails from mailbox to distribute to their cousins.
