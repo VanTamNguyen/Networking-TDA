@@ -63,4 +63,4 @@ DNS servers store **resource records (RRs)** which have the format **(Name, Valu
 
 ### 2.3 Socket Programming
 * **[TCP](code/socket/src/main/java/com/tamco/web)**
-* **[UDP](code/datagram-socket/src/com/tamco/udp)**
+* **[UDP](code/ping/src/com/tamco/ping)**
