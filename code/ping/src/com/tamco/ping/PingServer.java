@@ -35,7 +35,7 @@ public class PingServer {
                 }
 
             } catch (IOException e) {
-                System.out.println("Error while receiving ping packet: " + e.getMessage());
+                System.out.println("Error while receiving ping packet or sending pong packet: " + e.getMessage());
             }
         }
     }
