@@ -15,6 +15,8 @@
 
 ### 3.2 Services Provided by Transport Layer
 * **Multiplex and Demultiplex**
+    * **Demultiplex** is the job of delivering incoming transport layer segments to the correct socket (process/application) in receiving host based on the port; demultiplex happens at destination host.
+    * **Multiplex** is the job of gathering data chunks at source host from different socket (process/application), encapsulating each data chunk with header information (that will be used later by demultiplex) and creating segments to pass to network layer; multiplex happens at source host.
 * **Reliable Data Transfer**
 * **Error Detection**
 * **Congestion Control**
