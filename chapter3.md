@@ -18,6 +18,7 @@
     * **Demultiplex** is the job of delivering incoming transport layer segments to the correct socket in receiving host based on the port; demultiplex happens at destination host.
     * **Multiplex** is the job of gathering data chunks at source host from different socket, encapsulating each data chunk with header information (that will be used later by demultiplex) and creating segments to pass to network layer; multiplex happens at source host.
 * **Reliable Data Transfer**
+    * Transport layer may or may not provide *reliable data transfer* service. For example, in the Internet, TCP provides *reliable data transfer* servive but UDP does not. *Reliable data transfer* means data will be transfered in order and integrity.
 * **Error Detection**
 * **Congestion Control**
 
