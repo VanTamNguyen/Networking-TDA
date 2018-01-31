@@ -32,6 +32,7 @@
 ### 3.4 UDP
 Why choosing UDP to develop a network application when it does not provide *reliable data transfer* service? The anwser is as many applications are better suited for UDP for the following reasons:
 * *Finer application-level control over what data is sent and when.* Under UDP, as soon as an application process passes data to UDP, UDP will package the data inside an UDP segment and immediately pass the segment to network layer. TCP, on the other hand, has a congestion control mechanism that control when data is sent.
+* *No connection establishment.* TCP uses a three-way handshake before it starts sending data. UDP just blasts away without any formal preliminaries. Thus DNS does not introduce any delay to establish a connection.
 
 * **UDP Segment**
 * **UDP Checksum**
