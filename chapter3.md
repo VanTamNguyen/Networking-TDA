@@ -30,6 +30,9 @@
 * **Selective Repeat**
 
 ### 3.4 UDP
+Why choosing UDP to develop a network application when it does not provide *reliable data transfer* service? The anwser is as many applications are better suited for UDP for the following reasons:
+* *Finer application-level control over what data is sent and when.* Under UDP, as soon as an application process passes data to UDP, UDP will package the data inside an UDP segment and immediately pass the segment to network layer. TCP, on the other hand, has a congestion control mechanism that control when data is sent.
+
 * **UDP Segment**
 * **UDP Checksum**
 
