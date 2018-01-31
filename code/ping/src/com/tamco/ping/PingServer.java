@@ -5,6 +5,7 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
+import java.util.Arrays;
 
 /**
  * Created by TamCO on 1/22/18.
@@ -25,9 +26,11 @@ public class PingServer {
         while (true) {
             try {
                 socket.receive(packet);
-                String receivedMessage = new String(packet.getData());
+                int length = packet.getLength();
+                byte[] data = Arrays.copyOf(buffer, length);
+                String receivedMessage = new String(data);
 
-                if (receivedMessage.startsWith("ping")) {
+                if (receivedMessage.equals("ping")) {
                     InetAddress senderAddress = packet.getAddress();
                     int senderPort = packet.getPort();
                     DatagramPacket pong = new DatagramPacket("pong".getBytes(), "pong".getBytes().length, senderAddress, senderPort);

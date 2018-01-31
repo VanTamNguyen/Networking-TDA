@@ -2,6 +2,7 @@ package com.tamco.ping;
 
 import java.io.IOException;
 import java.net.*;
+import java.util.Arrays;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -33,13 +34,15 @@ public class PingClient {
             return;
         }
 
-        DatagramPacket receivedPacket = new DatagramPacket(new byte[4], 4);
+        DatagramPacket receivedPacket = new DatagramPacket(new byte[100], 100);
         try {
             socket.receive(receivedPacket);
             end = System.currentTimeMillis();
             socket.close();
 
-            String receivedMessage = new String(receivedPacket.getData());
+            int length = receivedPacket.getLength();
+            byte[] data = Arrays.copyOf(receivedPacket.getData(), length);
+            String receivedMessage = new String(data);
             System.out.println("Ping response [" + receivedMessage + "] from server in " + (end - start) + " milliseconds");
         } catch (IOException e) {
             System.out.println("Cannot receive ping response: " + e.getMessage());
