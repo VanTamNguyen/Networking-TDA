@@ -19,6 +19,8 @@
     * **Multiplex** is the job of gathering data chunks at source host from different socket, encapsulating each data chunk with header information (that will be used later by demultiplex) and creating segments to pass to network layer; multiplex happens at source host.
 * **Reliable Data Transfer**
     * Transport layer may or may not provide *reliable data transfer* service. For example, in the Internet, TCP provides *reliable data transfer* servive but UDP does not. *Reliable data transfer* means data will be transfered in order and integrity.
+    
+    
 * **Error Detection**
 * **Congestion Control**
 
@@ -33,6 +35,7 @@
 Why choosing UDP to develop a network application when it does not provide *reliable data transfer* service? The anwser is as many applications are better suited for UDP for the following reasons:
 * *Finer application-level control over what data is sent and when.* Under UDP, as soon as an application process passes data to UDP, UDP will package the data inside an UDP segment and immediately pass the segment to network layer. TCP, on the other hand, has a congestion control mechanism that control when data is sent.
 * *No connection establishment.* TCP uses a three-way handshake before it starts sending data. UDP just blasts away without any formal preliminaries. Thus DNS does not introduce any delay to establish a connection.
+* *No connection state.* TCP maintains connection state in the end systems. This connection state includes **receive and send buffer, congestion-control parameters, sequence number and acknowledgement number**. UDP, in the other hand, does not maintain connection state.
 
 * **UDP Segment**
 * **UDP Checksum**
