@@ -39,6 +39,9 @@ Why choosing UDP to develop a network application when it does not provide *reli
 * *Small packet header overhead*. TCP header has 20 bytes while UDP header has 8 bytes.
 
 * **UDP Segment**
+<p align="center">
+  <img src="images/udp_header.png"/>
+</p>
 * **UDP Checksum**
 
 ### 3.5 TCP
