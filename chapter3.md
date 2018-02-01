@@ -40,7 +40,7 @@ Why choosing UDP to develop a network application when it does not provide *reli
 
 * **UDP Segment**
 <p align="center">
-  <img src="images/udp_header.png"/>
+  <img src="images/udp_segment.png"/>
 </p>
 * **UDP Checksum**
 
