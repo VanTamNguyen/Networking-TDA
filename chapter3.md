@@ -42,6 +42,7 @@ Why choosing UDP to develop a network application when it does not provide *reli
 <p align="center">
   <img src="images/udp_segment.png"/>
 </p>
+
 * **UDP Checksum**
 
 ### 3.5 TCP
