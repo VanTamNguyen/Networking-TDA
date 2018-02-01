@@ -44,6 +44,9 @@ Why choosing UDP to develop a network application when it does not provide *reli
 </p>
 
 * **UDP Checksum**
+    * Checksum is used for error detection.
+    * The data of packet will be divided into bunch of 16 bit words. We calculate the sum of all the words (overflow is ignored) then perform 1's complement on that sum. 1's complement is performed by revert bit 0 to 1 and bit 1 to 0. We place the result to the checksum field.
+    * At the receiver, we also divided data of packet into bunch of 16 bit words. We sum all the words and the checksum (overflow is ignored). If the result is **1111 1111 1111 1111** the the data is correct.
 
 ### 3.5 TCP
 #### 3.5.1 Three Way Handshake
