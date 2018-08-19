@@ -38,8 +38,12 @@
 
     * Events that the sender in Go-Back-N protocol must handle:
         * *Invocation from above (applicaiton layer)*. When ***rdt_send()*** is called from above the sender first check if the window (N) is full. If the window is not full a packet will be created and sent and all related variable are updated.
-        * *Receive an acknowledgement*
-        * *A timeout occurrs*
+        * *Receipt of an acknowledgement*. In GBN protocol, an ACK for packet n will be taken to be ***cumulative acknowledgement***, meaning that all packets with sequence number up to and including n have been correctly revceived at receiver.
+        * *A timeout occurs*. If a timeout occurs the sender will resend all previous packets that sent but not acknowledged. This is why the protocol is called Go-Back-N. The sender uses only one single timer. 
+        
+    * Events that the receiver in Go-Back-N protocol must handle:
+        * *Packet with sequence number n is received correctly and in order*. Receiver will send an ACK for packet n and deliver data portion to upper layer (application).
+        * *All other cases*. Receivers discards the packet and resend an ACK for the most recently received in-order packet.
 
 <p align="center">
   <img src="images/GoBackN.PNG"/>
