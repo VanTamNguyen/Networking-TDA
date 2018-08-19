@@ -34,6 +34,9 @@
 * Send a segment --> Wait for acknowledgement --> Send a segment --> Wait for acknowledgement...
 #### 3.3.2 Pipeline
 * **Go Back N**
+<p align="center">
+  <img src="images/GoBackN.PNG"/>
+</p>
     * The sender is allowed to send multiple packets without waiting for an acknowledgement but is constrained to have no more than the maximum number, N, of the unacknowledged packets in the pipeline.
 * **Selective Repeat**
 
