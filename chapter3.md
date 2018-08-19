@@ -31,7 +31,7 @@
 
 ### 3.3 Reliable Data Transfer Protocol
 #### 3.3.1 Stop and Wait
-    Send a segment --> Wait for acknowledgement --> Send a segment --> Wait for acknowledgement...
+* Send a segment --> Wait for acknowledgement --> Send a segment --> Wait for acknowledgement...
 #### 3.3.2 Pipeline
 * **Go Back N**
 * **Selective Repeat**
