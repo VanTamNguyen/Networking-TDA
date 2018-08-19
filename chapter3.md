@@ -34,13 +34,16 @@
 * Send a segment --> Wait for acknowledgement --> Send a segment --> Wait for acknowledgement...
 #### 3.3.2 Pipeline
 * **Go Back N**
+    * The sender is allowed to send multiple packets without waiting for an acknowledgement but is constrained to have no more than the maximum number, N, of the unacknowledged packets in the pipeline.
+
+    * Events that the sender in Go-Back-N protocol must handle:
+        * *Invocation from above (applicaiton layer)*. When ***rdt_send()*** is called from above the sender first check if the window (N) is full. If the window is not full a packet will be created and sent and all related variable are updated.
+        * *Receive an acknowledgement*
+        * *A timeout occurrs*
+
 <p align="center">
   <img src="images/GoBackN.PNG"/>
 </p>
-<br/>
-    * The sender is allowed to send multiple packets without waiting for an acknowledgement but is constrained to have no more than the maximum number, N, of the unacknowledged packets in the pipeline.
-    * Events that the sender in Go-Back-N protocol must handle:
-        * *Invocation from above (applicaiton layer)*. When ***rdt_send()*** is called from above the sender first check if the window (N) is full. If the window is not full a packet will be created and sent and all related variable are updated.
 
 
 * **Selective Repeat**
