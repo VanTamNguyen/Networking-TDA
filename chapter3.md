@@ -36,12 +36,12 @@
 * **Go Back N**
     * The sender is allowed to send multiple packets without waiting for an acknowledgement but is constrained to have no more than the maximum number, N, of the unacknowledged packets in the pipeline.
 
-    * Events that the sender in Go-Back-N protocol must handle:
+    * Events that the sender in Go-Back-N protocol must handle
         * *Invocation from above (applicaiton layer)*. When ***rdt_send()*** is called from above the sender first check if the window (N) is full. If the window is not full a packet will be created and sent and all related variable are updated.
         * *Receipt of an acknowledgement*. In GBN protocol, an ACK for packet n will be taken to be ***cumulative acknowledgement***, meaning that all packets with sequence number up to and including n have been correctly revceived at receiver.
         * *A timeout occurs*. If a timeout occurs the sender will resend all previous packets that sent but not acknowledged. This is why the protocol is called Go-Back-N. The sender uses only one single timer. 
         
-    * Events that the receiver in Go-Back-N protocol must handle:
+    * Events that the receiver in Go-Back-N protocol must handle
         * *Packet with sequence number n is received correctly and in order*. Receiver will send an ACK for packet n and deliver data portion to upper layer (application).
         * *All other cases*. Receivers discards the packet and resend an ACK for the most recently received in-order packet.
 
@@ -51,6 +51,16 @@
 
 
 * **Selective Repeat**
+    * Events that the sender in Selective Repeat must handle
+        * *Invocation from above (application layer)*. Similar to Go-Back-N protocol.
+        * *Receipt of an ACK*. 
+        * *A timeout occurs*. 
+    * Events that the receiver in Selective Repeat must handle
+        * **
+        
+<p align="center">
+  <img src="images/Selective-Repeat.PNG"/>
+</p>
 
 ### 3.4 UDP
 * Why choosing UDP to develop a network application when it does not provide *reliable data transfer* service? The anwser is as many applications are better suited for UDP for the following reasons:
