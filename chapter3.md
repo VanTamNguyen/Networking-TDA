@@ -53,8 +53,8 @@
 * **Selective Repeat**
     * Events that the sender in Selective Repeat must handle
         * *Invocation from above (application layer)*. Similar to Go-Back-N protocol.
-        * *Receipt of an ACK*. The packet will be marked as received. The sender will check if there is continuous array of packets that has been received then the window will move forward. All packets that fall into window will be sent. If not the window stays the same.
-        * *A timeout occurs*. 
+        * *Receipt of an ACK*. The packet will be marked as received. The sender will check if there is continuous array of packets from send base that has been received then the window will move forward. All packets that fall into window will be retransmitted (sent). If not the window stays the same.
+        * *A timeout occurs*. In Selective Repeat each packet has its own timer. So when timeout the packet will be retransmitted
     * Events that the receiver in Selective Repeat must handle
         * **
         
